@@ -42,15 +42,54 @@ header {
   padding: 0 0 0 20px;
 }
 #content {
-  padding: 0 20px;
   position: absolute;
   bottom: 30px;
   left: 200px;
-  right: 200px;
+  right: 0;
   top: 43px;
 }
 #content h1 {
   line-height: 2;
+}
+#tab-top {
+  border-bottom: 1px solid #000;
+}
+#tab-top ul {
+  list-style: none;
+}
+#tab-top li {
+  display: inline-block;
+}
+#tab-top li.active {
+  background-color: #eee;
+}
+#tab-top a {
+  border-right: 1px solid #000;
+  display: block;
+  line-height: 2;
+  padding: 0 15px;
+}
+#tab-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 29px;
+}
+#tab-content ul {
+  list-style: none;
+}
+#tab-content li {
+  background-color: #fff;
+  padding: 0 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#tab-content li.active {
+  z-index: 1;
 }
 footer {
   border-top: 1px solid #000;

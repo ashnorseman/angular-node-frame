@@ -1,5 +1,18 @@
-<div id="content">
-  <h1>{{ title }}</h1>
+<nav id="tab-top" ng-show="tabs.length">
+  <ul>
+    <li ng-class="{active: tab.active}" ng-repeat="tab in tabs">
+      <a href="javascript:void(0)" ng-click="openMenu(tab.name)">{{ tab.showName }}</a>
+    </li>
+  </ul>
+</nav>
 
-  <p ng-show="uri">uri: {{ uri }}</p>
+<div id="tab-content" ng-show="tabs.length">
+
+  <ul class="tabs">
+    <li ng-class="{tab: true, active: tab.active}" ng-repeat="tab in tabs">
+      <h1>{{ tab.showName }}</h1>
+
+      <p ng-show="uri">uri: {{ tab.uri }}</p>
+    </li>
+  </ul>
 </div>
